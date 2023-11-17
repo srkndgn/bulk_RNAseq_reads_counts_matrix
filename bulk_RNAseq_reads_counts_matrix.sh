@@ -5,6 +5,7 @@
 # • Trimming (Trimmomatic)
 # • Alignment (HISAT2)
 # • Quantification (featureCounts)
+
 # Linux Basics
 # ▸ https://ubuntu.com/tutorials/command-...
 # ▸ https://xie186.github.io/Novice2Exper...
@@ -18,6 +19,8 @@
 # ▸ https://chipster.csc.fi/manual/librar...
 # ▸ http://rseqc.sourceforge.net/#infer-e...
 
+# Data link for demo.fastq file
+# https://drive.google.com/file/d/1AX-qXouF9BTeUKnqXKpk7RMBn_U08DVq/view?usp=drive_link
 ############################################################################################################################
 
 # List out channels
@@ -112,6 +115,8 @@ mkdir data
 conda activate RNAseq_env2
 
 ############################################################################################################################
+############################################################################################################################
+
 # STEP 1: Run fastqc
 fastqc data/demo.fastq -o data/
 
@@ -130,8 +135,10 @@ conda activate RNAseq_env2
 fastqc data/demo_trimmed.fastq -o data/
 
 ############################################################################################################################
+############################################################################################################################
 
 # STEP 2: Run HISAT2 > http://daehwankimlab.github.io/hisat2/download/
+
 mkdir HISAT2
 cd HISAT2
 
@@ -150,7 +157,7 @@ conda deactivate
 cd /path to directory/RNASeq_pipeline/
 
 ############################################################################################################################
-
+############################################################################################################################
 # STEP 3: Run featureCounts - Quantification
 
 # activate conda environment
@@ -176,4 +183,6 @@ cat demo_featurecounts.txt | less
 
 # to see just gene in and coressponding counts
 cat demo_featurecounts.txt | cut -f1,7 | less
+
+############################################################################################################################
 ############################################################################################################################
