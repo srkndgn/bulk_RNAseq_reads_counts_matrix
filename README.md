@@ -1,4 +1,5 @@
-# RNA-Seq Data Processing Workflow
+# RNAseq Data Processing Workflow
+# bulk RNAseq reads and generating counts matrix
 
 ## Overview
 
